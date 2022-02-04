@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname,
   entry: './frontend/not_all_trails.jsx',
   output: {
-    path: path.resolve(__dirname, 'app', 'javascript', 'packs'),
+    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js'
   },
   resolve: {
