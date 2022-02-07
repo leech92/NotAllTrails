@@ -23,10 +23,9 @@ export const clearSessionErrors = () => ({
     type: CLEAR_SESSION_ERRORS
 })
 
-export const login = (user) => dispatch => {
-    debugger
-    SessionAPIUtil.login(user).then(
-        user => {
+export const login = user => dispatch => {
+    return SessionAPIUtil.login(user)
+        .then(user => {
             dispatch(receiveCurrentUser(user))
         }, errors => {
             dispatch(receiveSessionErrors(errors.responseJSON))
@@ -35,9 +34,8 @@ export const login = (user) => dispatch => {
 }
 
 export const logout = () => dispatch => {
-    debugger
-    SessionAPIUtil.logout().then(
-        () => {
+    return SessionAPIUtil.logout()
+        .then(() => {
             dispatch(logoutCurrentUser())
         }, errors => {
             dispatch(receiveSessionErrors(errors.responseJSON))
@@ -45,10 +43,9 @@ export const logout = () => dispatch => {
     )
 }
 
-export const signup = (user) => dispatch => {
-    debugger
-    SessionAPIUtil.signup(user).then(
-        user => {
+export const signup = user => dispatch => {
+    return SessionAPIUtil.signup(user)
+        .then(user => {
             dispatch(receiveCurrentUser(user))
         }, errors => {
             dispatch(receiveSessionErrors(errors.responseJSON))
