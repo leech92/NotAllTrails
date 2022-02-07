@@ -1,0 +1,114 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(221, 218, 218);
+}
+
+.navbar-left{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.navbar-middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-right{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.navbar-rightx{
+    margin-right: 10px;
+}
+
+.navbar-explore{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar-saved{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(34, 33, 33);
+    margin-left: 30px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar-home{
+    font-size: 26px;
+    font-weight: 550;
+    color: rgb(126, 121, 121);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar-logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.navbar-signup{
+    font-size: 13px;
+    font-weight: 700;
+    padding: 13px 18px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: #2095cf;
+    color: white;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar-login{
+    font-size: 13px;
+    font-weight: 700;
+    padding: 11px 16px;
+    border: 2px solid #2095cf;
+    border-radius: 10px;
+    margin-left: 5px;
+    background-color: white;
+    color: #2095cf;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar-rightx:hover .navbar-drop{
+    visibility: visible;
+}
+
+.navbar-icon{
+    height: 45px;
+    width: 45px;
+}
+
+.navbar-drop{
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+    right: 5px;
+    box-shadow: 0 0 5px rgb(114, 111, 111);
+    border-radius: 20px;
+    position: absolute;
+    background-color: white;
+    visibility: hidden;
+}
+
+.navbar-logout{
+    cursor: pointer;
+    color: rgb(126, 121, 121);
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}

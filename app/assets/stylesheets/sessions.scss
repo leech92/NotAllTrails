@@ -1,0 +1,132 @@
+.session-form-background{
+    background-image: image_url('session-image.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 950px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.session-form{
+    background-color: white;
+    box-shadow: 0 0 15px rgb(114, 111, 111);
+    width: 480px;
+    border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.session-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(34, 33, 33);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.session-credentials{
+    display: flex;
+    flex-direction: column;
+}
+
+.session-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.session-input-box{
+    margin-top: 20px;
+    height: 44px;
+    width: 420px;
+}
+
+.session-input{
+    height: 40px;
+    width: 396px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding-left: 10px;
+    padding-right:10px;
+    font-size: 16px;
+    color: rgb(34, 33, 33);
+}
+
+.session-input::placeholder{
+    font-size: 16px;
+    color: rgb(163, 163, 163);
+}
+
+.session-input:hover{
+    border: 1px solid green;
+}
+
+.session-input:focus{
+    outline-width: 0;
+    border: 2px solid green;
+}
+
+.session-submit{
+    height: 40px;
+    border: 0px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(73, 143, 73);
+}
+
+.session-submit:hover{
+    background-color: rgb(96, 145, 96);
+}
+
+.session-switch{
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(163, 163, 163);
+}
+
+.session-link{
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(73, 143, 73);
+}
+
+.session-link:hover{
+    color: rgb(96, 145, 96);
+}
+
+.session-demo{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: rgb(163, 163, 163);
+}
+
+.session-demo-button{
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(73, 143, 73);
+}
+
+.session-demo-button:hover{
+    color: rgb(96, 145, 96);
+}
+
+.session-error{
+    color: red;
+    list-style: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    margin-top: 5px;
+}

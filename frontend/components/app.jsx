@@ -4,11 +4,13 @@ import { AuthRoute } from '../util/route_util'
 
 import SignUpFormContainer from './session_form/signup_form_container'
 import LoginFormContainer from './session_form/login_form_container'
+import NavBarContainer from './nav_bar/nav_bar_container'
 import SplashContainer from './splash/splash_container'
 import Footer from './footer/footer'
 
 const App = () => (
     <div>
+        <NavBarContainer />
         <Switch>
             <AuthRoute exact path='/login' component={LoginFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
