@@ -1,0 +1,1 @@
+json.partial! 'api/parks/park', park: @park
