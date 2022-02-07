@@ -1,0 +1,2 @@
+class Park < ApplicationRecord
+end
