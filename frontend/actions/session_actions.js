@@ -11,7 +11,7 @@ const receiveCurrentUser = currentUser => ({
 })
 
 const logoutCurrentUser = () => ({
-    type: LOGOUT_CURRENT_USER,
+    type: LOGOUT_CURRENT_USER
 })
 
 const receiveSessionErrors = errors => ({
