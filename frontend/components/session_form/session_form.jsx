@@ -67,17 +67,7 @@ class SessionForm extends React.Component {
 
         const renderError = (errors ? (
             errors.map((error, idx) => {
-                if (error.includes("Password")) {
-                    return <li className="session-error" key={idx}>{error}</li>
-                }else if (error.includes("Email")){
-                    return <li className="session-error" key={idx}>This email has already been used.</li>
-                }
-                
-                if (formType === "Login") {
-                    return <li className="session-error" key={idx}>{error}</li>
-                }else {
-                    return null
-                }
+                return <li className="session-error" key={idx}>{error}</li>
             })
         ) : "")
 
