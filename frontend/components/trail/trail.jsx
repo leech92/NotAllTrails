@@ -8,17 +8,15 @@ class Trail extends React.Component {
     }
 
     componentDidMount() {
-        debugger
-        this.props.fetchTrail(this.props.match.params.trailId)
         this.props.fetchPayload()
+        this.props.fetchTrail(this.props.match.params.trailId)
     }
 
     render() {
-        if (!Object.keys(this.props.trail).length) return null
+        if (!Object.keys(this.props.trail).length || !Object.keys(this.props.parks).length) return null
 
-        const { trail } = this.props
-
-        debugger
+        const { trail, parks } = this.props
+        const park = parks[trail.park_id]
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`, `${trail.trail_name}`]
 
         return(

@@ -7,6 +7,7 @@ import Trail from "./trail"
 const mSTP = (state) => {
     return {
         trail: state.entities.trails,
+        parks: state.entities.parks
     }
 }
 
