@@ -12,8 +12,8 @@ const Auth = ({ component: Component, path, loggedIn, exact}) => (
     />
 )
 
-const mapSTP = state => (
+const mSTP = state => (
     { loggedIn: Boolean(state.session.currentUserId) }
 )
 
-export const AuthRoute = withRouter(connect(mapSTP, null)(Auth))
+export const AuthRoute = withRouter(connect(mSTP, null)(Auth))

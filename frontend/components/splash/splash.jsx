@@ -1,5 +1,5 @@
 import React from "react";
-// import SearchBarContainer from "../search/search_bar_container";
+import SearchBarContainer from "../search/search_bar_container";
 
 const Splash = ({currentUser}) => {
     return (
@@ -8,7 +8,7 @@ const Splash = ({currentUser}) => {
                 {(currentUser) ? 
                     <p className="splash-text">Ready to do this, {currentUser.first_name}?</p> :
                     <p className="splash-text">Find your next trail</p>}
-                {/* <SearchBarContainer /> */}
+                <SearchBarContainer />
             </div>
             <div className="splash-info">
                 <div className="splash-info-container">

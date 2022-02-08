@@ -8,7 +8,6 @@ class Trail extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchPayload()
         this.props.fetchTrail(this.props.match.params.trailId)
     }
@@ -21,13 +20,11 @@ class Trail extends React.Component {
     }
 
     componentWillUnmount() {
-        // debugger
         this.props.clearPark()
         this.props.clearTrail()
     }
 
     render() {
-        // debugger
         if (!Object.keys(this.props.trail).length) return null
         if (!Object.keys(this.props.parks).length) return null
         if (Object.keys(this.props.parks).length !== 3) return null

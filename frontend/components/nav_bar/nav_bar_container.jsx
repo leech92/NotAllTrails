@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { logout } from '../../actions/session_actions'
 import NavBar from './nav_bar'
 
-const mapSTP = state => {
+const mSTP = state => {
     if (state.session.currentUserId) {
         return {
             currentUser: state.session.currentUserId
@@ -15,10 +15,10 @@ const mapSTP = state => {
     }
 }
 
-const mapDTP = dispatch => {
+const mDTP = dispatch => {
     return {
         logout: () => dispatch(logout()),
     }
 }
 
-export default connect(mapSTP, mapDTP)(NavBar)
+export default connect(mSTP, mDTP)(NavBar)

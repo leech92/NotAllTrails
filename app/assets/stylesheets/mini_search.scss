@@ -1,0 +1,127 @@
+.mini-search-bar-container{
+    height: 35px;
+    width: 330px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.mini-search-bar{
+    height: 35px;
+    width: 330px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    border: 1px solid rgb(226, 222, 222);;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.mini-search-bar-body{
+    margin-left: 5px;
+    height: 35px;
+    width: 330px;
+    padding: 0px;
+    border: 0px;
+    font-family: 'Helvetica Neue', Helvetica, arial;
+    font-size: 14px;
+}
+
+.mini-search-bar-image-container{
+    height: 35px;
+    width: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mini-search-bar-image{
+    height: 25px;
+    width: 25px;
+}
+
+.mini-search-bar-body:focus{
+    outline: 0px;
+}
+
+.mini-search-bar-unactive{
+    display: none;
+}
+
+.mini-search-bar-active{
+    width: 330px;
+    height: 200px;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 1;
+    margin-top: 30px;
+    padding-top: 5px;
+    background-color: white;
+    border: 1px solid rgb(226, 222, 222);;
+}
+
+.mini-search-bar-result{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid rgb(179, 176, 176);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mini-search-bar-result:hover{
+    background-color: green;
+}
+
+.mini-search-bar-result:hover .mini-result-text-name{
+    color: white;
+}
+
+.mini-search-bar-result:hover .mini-result-text-location{
+    color: white;
+}
+
+.mini-search-bar-result:hover .mini-result-image-container{
+    background-color: orange;
+}
+
+.mini-result-image-container{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(245, 238, 238);
+}
+
+.mini-result-image{
+    height: 25px;
+    width: 25px;
+}
+
+.mini-result-text{
+    margin-left: 10px;
+    font-family: 'Helvetica Neue', Helvetica, arial;
+
+}
+
+.mini-result-text-name{
+    font-size: 14px;
+    color: rgb(99, 99, 99);
+}
+
+.mini-result-text-location{
+    margin-top: 8px;
+    font-size: 10px;
+    color: rgb(99, 99, 99);
+}

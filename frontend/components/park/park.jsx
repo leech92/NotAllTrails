@@ -8,7 +8,6 @@ class Park extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchPark(this.props.match.params.parkId)
     }
 
@@ -19,12 +18,10 @@ class Park extends React.Component {
     }
 
     componentWillUnmount() {
-        // debugger
         this.props.clearPark()
     }
 
     render() {
-        // debugger
         if (!Object.keys(this.props.park).length) return null
         if (Object.keys(this.props.park).length === 3) return null
 

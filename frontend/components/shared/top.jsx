@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MiniSearchBarContainer from "./mini_search_bar_container";
 
 class Top extends React.Component{
     constructor(props) {
@@ -35,6 +36,9 @@ class Top extends React.Component{
                             )
                         }
                     })}
+                </div>
+                <div className="top-right">
+                    <MiniSearchBarContainer />
                 </div>
             </div>
         )

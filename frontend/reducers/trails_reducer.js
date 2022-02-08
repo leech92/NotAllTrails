@@ -4,12 +4,10 @@ const trailsReducer = (state = {}, action) => {
     Object.freeze(state)
     switch (action.type) {
         case RECEIVE_TRAIL:
-            // debugger
             return action.trail
         case RECEIVE_TRAILS:
             return action.trails
         case CLEAR_TRAIL:
-            // debugger
             return {}
         default:
             return state
