@@ -29,8 +29,7 @@ export const login = user => dispatch => {
             dispatch(receiveCurrentUser(user))
         }, errors => {
             dispatch(receiveSessionErrors(errors.responseJSON))
-        }
-    )
+        })
 }
 
 export const logout = () => dispatch => {
@@ -39,8 +38,7 @@ export const logout = () => dispatch => {
             dispatch(logoutCurrentUser())
         }, errors => {
             dispatch(receiveSessionErrors(errors.responseJSON))
-        }
-    )
+        })
 }
 
 export const signup = user => dispatch => {
@@ -49,6 +47,5 @@ export const signup = user => dispatch => {
             dispatch(receiveCurrentUser(user))
         }, errors => {
             dispatch(receiveSessionErrors(errors.responseJSON))
-        }
-    )
+        })
 }
