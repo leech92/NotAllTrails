@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchPayload } from "../../actions/park_actions";
-import { fetchTrail } from "../../actions/trail_actions";
+import { fetchPayload, clearPark } from "../../actions/park_actions";
+import { fetchTrail, clearTrail } from "../../actions/trail_actions";
 import Trail from "./trail"
 
 const mSTP = (state) => {
@@ -14,7 +14,9 @@ const mSTP = (state) => {
 const mDTP = dispatch => {
     return {
         fetchTrail: trailId => dispatch(fetchTrail(trailId)),
-        fetchPayload: () => dispatch(fetchPayload())
+        fetchPayload: () => dispatch(fetchPayload()),
+        clearTrail: () => dispatch(clearTrail()),
+        clearPark: () => dispatch(clearPark())
     }
 }
 

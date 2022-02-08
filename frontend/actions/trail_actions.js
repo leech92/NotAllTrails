@@ -2,6 +2,7 @@ import * as TrailAPIUtil from "../util/trail_api_util"
 
 export const RECEIVE_TRAIL = "RECEIVE_TRAIL"
 export const RECEIVE_TRAILS = "RECEIVE_TRAILS"
+export const CLEAR_TRAIL = "CLEAR_TRAIL"
 
 const receiveTrail = trail => ({
     type: RECEIVE_TRAIL,
@@ -11,6 +12,10 @@ const receiveTrail = trail => ({
 const receiveTrails = trails => ({
     type: RECEIVE_TRAILS,
     trails
+})
+
+const removeTrail = () => ({
+    type: CLEAR_TRAIL
 })
 
 export const fetchTrail = trailId => dispatch => {
@@ -26,3 +31,7 @@ export const fetchTrails = () => dispatch => {
             dispatch(receiveTrails(trails))
         })
 }
+
+export const clearTrail = () => dispatch => (
+    dispatch(removeTrail())
+)

@@ -8,15 +8,30 @@ class Park extends React.Component {
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchPark(this.props.match.params.parkId)
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.parkId !== this.props.match.params.parkId) {
+            this.props.fetchPark(this.props.match.params.parkId)
+        }
+    }
+
+    componentWillUnmount() {
+        // debugger
+        this.props.clearPark()
+    }
+
     render() {
+        // debugger
         if (!Object.keys(this.props.park).length) return null
+        if (Object.keys(this.props.park).length === 3) return null
 
         const { park } = this.props
         const trails = park.trails
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`]
+
         return(
             <div className="park">
                 <Top location={location} parkId={park.id}/>

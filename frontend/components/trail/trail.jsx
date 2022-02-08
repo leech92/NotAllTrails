@@ -8,12 +8,29 @@ class Trail extends React.Component {
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchPayload()
         this.props.fetchTrail(this.props.match.params.trailId)
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.trailId !== this.props.match.params.trailId) {
+            this.props.fetchPayload()
+            this.props.fetchTrail(this.props.match.params.trailId)
+        }
+    }
+
+    componentWillUnmount() {
+        // debugger
+        this.props.clearPark()
+        this.props.clearTrail()
+    }
+
     render() {
-        if (!Object.keys(this.props.trail).length || !Object.keys(this.props.parks).length) return null
+        // debugger
+        if (!Object.keys(this.props.trail).length) return null
+        if (!Object.keys(this.props.parks).length) return null
+        if (Object.keys(this.props.parks).length !== 3) return null
 
         const { trail, parks } = this.props
         const park = parks[trail.park_id]

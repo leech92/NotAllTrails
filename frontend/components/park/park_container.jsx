@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchPark } from "../../actions/park_actions";
+import { fetchPark, clearPark } from "../../actions/park_actions";
 import Park from "./park"
 
 const mSTP = (state) => {
@@ -11,7 +11,8 @@ const mSTP = (state) => {
 
 const mDTP = dispatch => {
     return {
-        fetchPark: parkId => dispatch(fetchPark(parkId))
+        fetchPark: parkId => dispatch(fetchPark(parkId)),
+        clearPark: () => dispatch(clearPark())
     }
 }
 
