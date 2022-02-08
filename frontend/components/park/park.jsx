@@ -17,7 +17,6 @@ class Park extends React.Component {
         const { park } = this.props
         const trails = park.trails
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`]
-        debugger
         return(
             <div className="park">
                 <Top location={location} parkId={park.id}/>
