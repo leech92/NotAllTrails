@@ -14,11 +14,7 @@ class SearchBar extends React.Component{
     }
 
     componentDidMount() {
-        this.props.fetchPayload()
-    }
-
-    componentWillUnmount() {
-        this.props.clearPark()
+        this.props.fetchSearches()
     }
 
     parkSearch(id) {
