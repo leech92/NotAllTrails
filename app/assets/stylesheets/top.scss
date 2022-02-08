@@ -1,0 +1,30 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    width: 1025px;
+}
+
+.top-left{
+    font-size: 11px;
+    color: rgb(126, 121, 121);
+    display: flex;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.top-place{
+    display: flex;
+}
+
+.top-place > * {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(126, 121, 121);
+}
+
+.next{
+    font-size: 8px;
+}

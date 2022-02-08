@@ -6,12 +6,7 @@ const trailsReducer = (state = {}, action) => {
         case RECEIVE_TRAIL:
             return Object.assign({}, state, {[action.trail.id]: action.trail})
         case RECEIVE_TRAILS:
-            let nextState = Object.assign({}, state)
-
-            action.trails.forEach(trail => (
-                nextState[trail.id] = trail
-            ))
-            return nextState
+            return action.trails
         default:
             return state
     }

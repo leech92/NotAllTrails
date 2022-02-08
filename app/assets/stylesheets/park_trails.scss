@@ -1,0 +1,125 @@
+.park-trails{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.park-trails-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+
+.park-trail{
+    margin-top: 25px;
+    width: 1025px;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px rgb(214, 213, 213);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.park-trail-img{
+    margin-left: 15px;
+    height: 190px;
+    width: 290px;
+    border-radius: 8px;
+}
+
+.park-trail-info{
+    margin-right: 15px;
+    height: 180px;
+    width: 680px;
+}
+
+.park-trail-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+
+.park-trail-park{
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(126, 121, 121);
+}
+
+.park-trail-rating{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.park-trail-easy{
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    color: white;
+    background-color: rgb(82, 143, 70);
+    width: 70px;
+    border-radius: 5px;
+}
+
+.park-trail-moderate{
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    color: white;
+    background-color: rgb(78, 178, 218);
+    width: 70px;
+    border-radius: 5px;
+}
+
+.park-trail-hard{
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    color: white;
+    background-color: rgb(90, 90, 90);
+    width: 70px;
+    border-radius: 5px;
+}
+
+.park-trail-length{
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(126, 121, 121);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.park-trail-description{
+    position: relative;
+    margin-top: 25px;
+    font-size: 15px;
+    color: rgb(126, 121, 121);
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-weight: 100;
+}
+
+.park-trail-description-body{
+    overflow: hidden;
+    height: 50px;
+}
+
+.park-trail-description-show{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    color: rgb(82, 143, 70);
+    background-color: white;
+    box-shadow: 0px 0px 21px 5px white;
+}

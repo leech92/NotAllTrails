@@ -1,0 +1,91 @@
+.park{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1025px;
+    margin: auto;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.park-pictures{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1025px;
+}
+
+.park-picture{
+    height: 220px;
+    width: 330px;
+    border-radius: 8px;
+}
+
+.park-description{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+}
+
+.park-description-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+
+.park-rating{
+    margin-top: 15px;
+}
+
+.park-description-body{
+    margin-top: 15px;
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-weight: 100;
+}
+
+.park-map{
+    margin-top: 15px;
+}
+
+.park-buttons{
+    margin-top: 15px;
+}
+
+.park-info{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 15px;
+    border-top: 1px solid rgb(231, 231, 231);
+    border-bottom: 1px solid rgb(231, 231, 231);
+    width: 1025px;
+    display: flex;
+    flex-direction: column;
+}
+
+.park-info-title{
+    font-size: 21px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+
+.park-info-content{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+}
+
+.info-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+
+.info-content{
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(88, 88, 88);
+}
