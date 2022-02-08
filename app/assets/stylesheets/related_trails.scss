@@ -1,0 +1,100 @@
+.trail-relateds{
+    margin-left: 6%;
+    margin-right: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+.trail-relateds-title{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.trail-related{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(214, 213, 213);
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.trail-related-img{
+    height: 125px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.trail-related-title{
+    margin-top: 14px;
+    margin-left: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+
+.trail-related-park{
+    margin-top: 8px;
+    margin-left: 16px;
+    font-size: 14px;
+    color: rgb(126, 121, 121);
+}
+
+.trail-related-rating{
+    margin-top: 8px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+}
+
+.trail-related-easy{
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    color: white;
+    background-color: rgb(82, 143, 70);
+    width: 70px;
+    border-radius: 5px;
+}
+
+.trail-related-moderate{
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    color: white;
+    background-color: rgb(78, 178, 218);
+    width: 70px;
+    border-radius: 5px;
+}
+
+.trail-related-hard{
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    color: white;
+    background-color: rgb(90, 90, 90);
+    width: 70px;
+    border-radius: 5px;
+}
+
+.trail-related-length{
+    margin-top: 8px;
+    margin-left: 16px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: rgb(126, 121, 121);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+}

@@ -8,6 +8,7 @@ import NavBarContainer from './nav_bar/nav_bar_container'
 import SplashContainer from './splash/splash_container'
 import Footer from './footer/footer'
 import ParkContainer from './park/park_container'
+import TrailContainer from './trail/trail_container'
 
 const App = () => (
     <div>
@@ -16,6 +17,7 @@ const App = () => (
             <AuthRoute exact path='/login' component={LoginFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
             <Route path="/parks/:parkId" component={ParkContainer} />
+            <Route path="/trails/:trailId" component={TrailContainer} />
             <Route exact path="/" component={SplashContainer} />
         </Switch>
         <Footer />

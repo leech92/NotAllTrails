@@ -6,6 +6,7 @@ const parksReducer = (state = {}, action) => {
         case RECEIVE_PARK:
             return action.park
         case RECEIVE_PAYLOAD:
+            debugger
             return action.payload
         default:
             return state

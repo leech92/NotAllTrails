@@ -4,7 +4,7 @@ const trailsReducer = (state = {}, action) => {
     Object.freeze(state)
     switch (action.type) {
         case RECEIVE_TRAIL:
-            return Object.assign({}, state, {[action.trail.id]: action.trail})
+            return action.trail
         case RECEIVE_TRAILS:
             return action.trails
         default:
