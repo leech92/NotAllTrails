@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
 
     <script type="text/javascript">
       window.linkedin = "<%= image_url('linkedin.png') %>"

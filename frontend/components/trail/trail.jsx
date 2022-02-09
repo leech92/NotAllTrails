@@ -31,6 +31,7 @@ class Trail extends React.Component {
 
         const { trail, parks } = this.props
         const park = parks[trail.park_id]
+        const filteredtrails = park.trails.filter(filteredTrail => filteredTrail.id !== trail.id)
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`, `${trail.trail_name}`]
 
         return(
@@ -90,7 +91,7 @@ class Trail extends React.Component {
                         <div className="trail-map">
                             Map Placeholder
                         </div>
-                        <RelatedTrails park={park} trail={trail} />
+                        <RelatedTrails park={park} filteredtrails={filteredtrails} />
                     </div>
                 </div>
             </div>

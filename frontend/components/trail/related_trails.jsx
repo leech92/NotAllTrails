@@ -7,9 +7,7 @@ class RelatedTrails extends React.Component {
     }
 
     render() {
-        const { park, trail } = this.props
-        const trails = park.trails
-        const filteredtrails = trails.filter(filteredTrail => filteredTrail.id !== trail.id)
+        const { park, filteredtrails } = this.props
 
         return(
             <div className="trail-relateds">
