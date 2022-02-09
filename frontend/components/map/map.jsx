@@ -5,6 +5,52 @@ class Map extends React.Component {
     constructor(props) {
         super(props)
         this.setMap = this.setMap.bind(this)
+        this.createTrailMarkers = this.createTrailMarkers.bind(this)
+        this.createParkMarkers = this.createParkMarkers.bind(this)
+    }
+
+    createTrailMarkers(trail) {
+        let marker;
+        let pos;
+
+        pos = new google.maps.LatLng(trail.latitude, trail.longitude)
+        marker = new google.maps.Marker({
+            position: pos,
+            map: this.map
+        })
+
+        const contentString = '<div>' + `<h1>Name: ${trail.trail_name}</h1>` + `<h2>Length: ${trail.length} mi</h2>` + `<h2>Duration: ${trail.duration}</h2>`
+        const infoWindow = new window.google.maps.InfoWindow({ content: contentString })
+
+        marker.addListener('click', () => {
+            infoWindow.open({
+                anchor: marker,
+                map: this.map,
+                shouldFocus: true
+            })
+        })
+    }
+
+    createParkMarkers(park) {
+        let marker;
+        let pos;
+
+        pos = new google.maps.LatLng(this.props.park.latitude, this.props.park.longitude)
+        marker = new google.maps.Marker({
+            position: pos,
+            map: this.map
+        })
+
+        const contentString = '<div>' + `<h1>Name: ${park.park_name}</h1>` + `<h2>Acreage: ${Number(park.acreage).toLocaleString()} acres</h2>` + `<h2>Contact: ${park.contact}</h2>`
+        const infoWindow = new window.google.maps.InfoWindow({ content: contentString })
+
+        marker.addListener('click', () => {
+            infoWindow.open({
+                anchor: marker,
+                map: this.map,
+                shouldFocus: true
+            })
+        })
     }
 
     setMap() {
@@ -24,86 +70,21 @@ class Map extends React.Component {
         }
 
         this.map = new google.maps.Map(this.mapNode, mapOptions)
-
-        let trailMarker = [];
-        let trailPos = [];
-        let parkMarker;
-        let parkPos;
         
         if (this.props.trail){
             this.props.filteredTrails.push(this.props.trail)
             
-            this.props.filteredTrails.forEach((trail, index) => {
-                trailPos[index] = new google.maps.LatLng(trail.latitude, trail.longitude)
-                trailMarker[index] = new google.maps.Marker({
-                    position: trailPos[index],
-                    map: this.map
-                })
-
-                const contentString = '<div>' + `<h1>Name: ${trail.trail_name}</h1>` + `<h2>Length: ${trail.length} mi</h2>` + `<h2>Duration: ${trail.duration}</h2>`
-                const infoWindow = new window.google.maps.InfoWindow({ content: contentString })
-
-                trailMarker[index].addListener('click', () => {
-                    infoWindow.open({
-                        anchor: trailMarker[index],
-                        map: this.map,
-                        shouldFocus: true
-                    })
-                })
+            this.props.filteredTrails.forEach(trail => {
+                this.createTrailMarkers(trail)
             })
 
-            parkPos = new google.maps.LatLng(this.props.park.latitude, this.props.park.longitude)
-            parkMarker = new google.maps.Marker({
-                position: parkPos,
-                map: this.map
-            })
-
-            const contentString = '<div>' + `<h1>Name: ${this.props.park.park_name}</h1>` + `<h2>Acreage: ${Number(this.props.park.acreage).toLocaleString()} acres</h2>` + `<h2>Contact: ${this.props.park.contact}</h2>`
-            const infoWindow = new window.google.maps.InfoWindow({ content: contentString })
-
-            parkMarker.addListener('click', () => {
-                infoWindow.open({
-                    anchor: parkMarker,
-                    map: this.map,
-                    shouldFocus: true
-                })
-            })
+            this.createParkMarkers(this.props.park)
         } else{
-            this.props.park.trails.forEach((trail, index) => {
-                trailPos[index] = new google.maps.LatLng(trail.latitude, trail.longitude);
-                trailMarker[index] = new google.maps.Marker({
-                    position: trailPos[index],
-                    map: this.map
-                })
-                
-                const contentString = '<div>' + `<h1>Name: ${trail.trail_name}</h1>` + `<h2>Length: ${trail.length} mi</h2>` + `<h2>Duration: ${trail.duration}</h2>`
-                const infoWindow = new window.google.maps.InfoWindow({ content: contentString })
-
-                trailMarker[index].addListener('click', () => {
-                    infoWindow.open({
-                        anchor: trailMarker[index],
-                        map: this.map,
-                        shouldFocus: true
-                    })
-                })
+            this.props.park.trails.forEach(trail => {
+                this.createTrailMarkers(trail)
             })
 
-            parkPos = new google.maps.LatLng(this.props.park.latitude, this.props.park.longitude)
-            parkMarker = new google.maps.Marker({
-                position: parkPos,
-                map: this.map
-            })
-
-            const contentString = '<div>' + `<h1>Name: ${this.props.park.park_name}</h1>` + `<h2>Acreage: ${Number(this.props.park.acreage).toLocaleString()} acres</h2>` + `<h2>Contact: ${this.props.park.contact}</h2>`
-            const infoWindow = new window.google.maps.InfoWindow({ content: contentString })
-
-            parkMarker.addListener('click', () => {
-                infoWindow.open({
-                    anchor: parkMarker,
-                    map: this.map,
-                    shouldFocus: true
-                })
-            })
+            this.createParkMarkers(this.props.park)
         }
     }
 
