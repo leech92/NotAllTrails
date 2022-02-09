@@ -1,6 +1,7 @@
 import React from "react";
 import Top from "../shared/top"
 import ParkTrails from "./park_trails"
+import Map from "../map/map";
 
 class Park extends React.Component {
     constructor(props) {
@@ -47,7 +48,7 @@ class Park extends React.Component {
                     <p className="park-description-body">{park.description}</p>
                 </div>
                 <div className="park-map">
-                    Map Placeholder
+                    <Map park={park} />
                 </div>
                 <div className="park-buttons">
                     Buttons Placeholder

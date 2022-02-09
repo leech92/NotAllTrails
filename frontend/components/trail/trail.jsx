@@ -1,6 +1,7 @@
 import React from "react";
 import Top from "../shared/top";
 import RelatedTrails from "./related_trails"
+import Map from "../map/map";
 
 class Trail extends React.Component {
     constructor(props) {
@@ -31,7 +32,7 @@ class Trail extends React.Component {
 
         const { trail, parks } = this.props
         const park = parks[trail.park_id]
-        const filteredtrails = park.trails.filter(filteredTrail => filteredTrail.id !== trail.id)
+        const filteredTrails = park.trails.filter(filteredTrail => filteredTrail.id !== trail.id)
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`, `${trail.trail_name}`]
 
         return(
@@ -89,9 +90,9 @@ class Trail extends React.Component {
                     </div>
                     <div className="trail-right">
                         <div className="trail-map">
-                            Map Placeholder
+                            <Map trail={trail} filteredTrails={filteredTrails} park={park} />
                         </div>
-                        <RelatedTrails park={park} filteredtrails={filteredtrails} />
+                        <RelatedTrails park={park} filteredTrails={filteredTrails} />
                     </div>
                 </div>
             </div>

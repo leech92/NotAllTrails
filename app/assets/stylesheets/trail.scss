@@ -183,3 +183,15 @@
     font-weight: bold;
     color: rgb(44, 43, 43);
 }
+
+.trail-map{
+    margin-top: 15px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.trail-map > .map{
+    height: 250px;
+    width: 287px;
+    border-radius: 10px;
+}

@@ -47,7 +47,13 @@
 }
 
 .park-map{
-    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.park-map > .map{
+    height: 250px;
+    width: 750px;
+    border-radius: 10px;
 }
 
 .park-buttons{

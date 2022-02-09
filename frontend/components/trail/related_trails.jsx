@@ -7,27 +7,27 @@ class RelatedTrails extends React.Component {
     }
 
     render() {
-        const { park, filteredtrails } = this.props
+        const { park, filteredTrails } = this.props
 
         return(
             <div className="trail-relateds">
                 <h1 className="trail-relateds-title">Nearby trails</h1>
                 <div>
-                {filteredtrails.map((relatedtrail, idx) => (
-                    <Link key={idx} to={`/trails/${relatedtrail.id}`} className="trail-related">
-                        <img className="trail-related-img" src={relatedtrail.photoURL} />
-                        <h1 className="trail-related-title">{relatedtrail.trail_name}</h1>
+                {filteredTrails.map((relatedTrail, idx) => (
+                    <Link key={idx} to={`/trails/${relatedTrail.id}`} className="trail-related">
+                        <img className="trail-related-img" src={relatedTrail.photoURL} />
+                        <h1 className="trail-related-title">{relatedTrail.trail_name}</h1>
                         <p className="trail-related-park">{park.park_name}</p>
                         <div className="trail-related-rating">
-                            <span className={`trail-related-${relatedtrail.difficulty}`}>
-                                {relatedtrail.difficulty}
+                            <span className={`trail-related-${relatedTrail.difficulty}`}>
+                                {relatedTrail.difficulty}
                             </span>
                             Rating Placeholder
                         </div>
                         <div className="trail-related-length">
-                            <p>Length: {relatedtrail.length} </p>
+                            <p>Length: {relatedTrail.length} </p>
                             <span>&#8226;</span>
-                            <p>{relatedtrail.duration}</p>
+                            <p>{relatedTrail.duration}</p>
                         </div>
                     </Link>
                 ))}
