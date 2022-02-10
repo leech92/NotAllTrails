@@ -51,7 +51,18 @@ class Park extends React.Component {
                     <Map park={park} />
                 </div>
                 <div className="park-buttons">
-                    Buttons Placeholder
+                    <a className="park-buttons-container" target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${park.latitude},${park.longitude}`}>
+                        <div className="park-buttons-bubble">
+                            <img className="park-buttons-image" src={window.map} />
+                        </div>
+                        <p className="park-buttons-text">Directions</p>
+                    </a>
+                    <a className="park-buttons-container" target="_blank" href="https://www.facebook.com/">
+                        <div className="park-buttons-bubble">
+                            <img className="park-buttons-image" src={window.share} />
+                        </div>
+                        <p className="park-buttons-text">Share</p>
+                    </a>
                 </div>
                 <div className="park-info">
                     <h1 className="park-info-title">Park Information</h1>
