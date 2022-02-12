@@ -5,8 +5,6 @@ const trailsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_TRAIL:
             return action.trail
-        case RECEIVE_TRAILS:
-            return action.trails
         case CLEAR_TRAIL:
             return {}
         default:

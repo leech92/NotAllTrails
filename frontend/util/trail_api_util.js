@@ -4,10 +4,3 @@ export const fetchTrail = trailId => {
         method: "GET"
     })
 }
-
-export const fetchTrails = () => {
-    return $.ajax({
-        url: "api/trails",
-        method: "GET"
-    })
-}
