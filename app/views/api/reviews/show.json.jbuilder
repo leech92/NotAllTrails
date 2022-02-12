@@ -1,1 +1,1 @@
-json.partial! 'api/trails/trail', review: @review
+json.partial! 'api/trails/trail', review: @review, trail: @trail
