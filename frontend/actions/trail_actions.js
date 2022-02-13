@@ -22,3 +22,24 @@ export const fetchTrail = trailId => dispatch => {
 export const clearTrail = () => dispatch => (
     dispatch(removeTrail())
 )
+
+export const createReview = review => dispatch => {
+    return TrailAPIUtil.createReview(review)
+        .then(trail => {
+            dispatch(receiveTrail(trail))
+        })
+}
+
+export const updateReview = review => dispatch => {
+    return TrailAPIUtil.updateReview(review)
+        .then(trail => {
+            dispatch(receiveTrail(trail))
+        })
+}
+
+export const deleteReview = reviewId => dispatch => {
+    return TrailAPIUtil.deleteReview(reviewId)
+        .then(trail => {
+            dispatch(receiveTrail(trail))
+        })
+}
