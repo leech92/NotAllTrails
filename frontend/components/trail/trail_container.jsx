@@ -10,6 +10,7 @@ const mSTP = (state) => {
     return {
         trail: state.entities.trails,
         parks: state.entities.parks,
+        user: state.entities.users[state.session.currentUserId]
     }
 }
 

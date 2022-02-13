@@ -2,6 +2,7 @@ import React from "react";
 import Top from "../shared/top";
 import RelatedTrails from "./related_trails"
 import Map from "../map/map";
+import Review from "../review/review"
 
 class Trail extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class Trail extends React.Component {
         if (!Object.keys(this.props.parks).length) return null
         if (Object.keys(this.props.parks).length !== 3) return null
 
-        const { trail, parks } = this.props
+        const { trail, parks, user } = this.props
         const park = parks[trail.park_id]
         const filteredTrails = park.trails.filter(filteredTrail => filteredTrail.id !== trail.id)
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`, `${trail.trail_name}`]
@@ -84,9 +85,7 @@ class Trail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="trail-reviews">
-                            {/* <ReviewContainer reviews={trail.reviews} deleteReview={this.props.deleteReview} openModal={this.openModal} /> */}
-                        </div>
+                        <Review reviews={trail.reviews} user={user} deleteReview={this.props.deleteReview} openModal={this.props.openModal} />
                     </div>
                     <div className="trail-right">
                         <div className="trail-map">
