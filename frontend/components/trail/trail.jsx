@@ -85,7 +85,7 @@ class Trail extends React.Component {
                             </div>
                         </div>
                         <div className="trail-reviews">
-                            Reviews Placeholder
+                            {/* <ReviewContainer reviews={trail.reviews} deleteReview={this.props.deleteReview} openModal={this.openModal} /> */}
                         </div>
                     </div>
                     <div className="trail-right">

@@ -9,9 +9,11 @@ import SplashContainer from './splash/splash_container'
 import Footer from './footer/footer'
 import ParkContainer from './park/park_container'
 import TrailContainer from './trail/trail_container'
+import Modal from './modal/modal'
 
 const App = () => (
     <div>
+        <Modal />
         <NavBarContainer />
         <Switch>
             <AuthRoute exact path='/login' component={LoginFormContainer} />
