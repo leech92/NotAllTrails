@@ -8,7 +8,7 @@ class Review extends React.Component {
 
     render() {
         const { reviews, user, deleteReview, openModal} = this.props
-
+        debugger
         const options = {
             size: 15,
             isHalf: true,

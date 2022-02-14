@@ -10,11 +10,13 @@ class Park extends React.Component {
 
     componentDidMount() {
         this.props.fetchPark(this.props.match.params.parkId)
+        window.scrollTo(0, 0)
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.parkId !== this.props.match.params.parkId) {
             this.props.fetchPark(this.props.match.params.parkId)
+            window.scrollTo(0, 0)
         }
     }
 

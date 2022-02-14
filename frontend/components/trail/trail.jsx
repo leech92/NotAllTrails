@@ -12,12 +12,14 @@ class Trail extends React.Component {
     componentDidMount() {
         this.props.fetchPayload()
         this.props.fetchTrail(this.props.match.params.trailId)
+        window.scrollTo(0, 0)
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.trailId !== this.props.match.params.trailId) {
             this.props.fetchPayload()
             this.props.fetchTrail(this.props.match.params.trailId)
+            window.scrollTo(0, 0)
         }
     }
 

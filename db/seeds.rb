@@ -220,4 +220,58 @@ review9 = Review.create!(trail_id: trail4.id,
                          user_id: user2.id,
                          rating: 5,
                          date: "2022-01-08",
-                         body: ""
+                         body: "This trail was recommended to me by my friend from Pallet Town. The hike was great but I was most excited to see all the wild Weedle and Beedrill.")
+
+review10 = Review.create!(trail_id: trail5.id,
+                         user_id: demo.id,
+                         rating: 4,
+                         date: "2021-08-01",
+                         body: "This a great trail but have you met Christian? I heard he's a skilled software engineer who is looking for a job.")
+
+review11 = Review.create!(trail_id: trail6.id,
+                         user_id: user3.id,
+                         rating: 4,
+                         date: "2021-12-12",
+                         body: "We went on this hike during Decemeber and I can't recommend it enough. It has the most beautiful scenery when the pond is frozen and the ground is covered in now. However, be careful because the snow will cover some of the rocky portions of the path.")
+
+review12 = Review.create!(trail_id: trail6.id,
+                         user_id: user4.id,
+                         rating: 1,
+                         date: "2022-01-02",
+                         body: "DO NOT GO! My friends and I came here to find the last Horcrux but there were death eaters everywhere. If you value your lie you will stay far away.")
+
+review13 = Review.create!(trail_id: trail7.id,
+                         user_id: user5.id,
+                         rating: 5,
+                         date: "2021-10-10",
+                         body: "This is an amazing trail but don't make the mistake of underestimatin it. The trail is both long and extremely difficult. At certain points I was on all fours rock scrambling. However, the long hike and the difficultly is worth it becasue the trail is a beautiful beast.")
+
+review14 = Review.create!(trail_id: trail7.id,
+                         user_id: user1.id,
+                         rating: 5,
+                         date: "2021-11-21",
+                         body: "I haven't gone on a hike this difficult since my knee surgery. And I have to say, it was 100% worth it. If you have knee problems make sure you get clearance from your doctor. This trail is long and hard.")
+
+review15 = Review.create!(trail_id: trail7.id,
+                         user_id: user2.id,
+                         rating: 4,
+                         date: "2021-11-29",
+                         body: "Long and challenging. Don't forget beautiful.")
+
+review16 = Review.create!(trail_id: trail8.id,
+                         user_id: demo.id,
+                         rating: 4,
+                         date: "2021-08-01",
+                         body: "This a great trail but have you met Christian? I heard he's a skilled software engineer who is looking for a job.")
+
+review17 = Review.create!(trail_id: trail9.id,
+                         user_id: user3.id,
+                         rating: 4,
+                         date: "2021-08-06",
+                         body: "This hike is a short and simple hike that I enjoy doing every weekend. If you're looking for a hike that is mildly challenging but won;t take up a huge chunk of your day, look no further.")
+
+review18 = Review.create!(trail_id: trail9.id,
+                         user_id: user4.id,
+                         rating: 5,
+                         date: "2022-01-17",
+                         body: "Funny story, I actually found this hike by getting lost. But I am glad that I did because this hike is a gem that I always find myself coming back to.")
