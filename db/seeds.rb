@@ -11,9 +11,11 @@ require 'open-uri'
 User.destroy_all
 Park.destroy_all
 Trail.destroy_all
+Review.destroy_all
 ApplicationRecord.connection.reset_pk_sequence!('users')
 ApplicationRecord.connection.reset_pk_sequence!('parks')
 ApplicationRecord.connection.reset_pk_sequence!('trails')
+ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
 demo = User.create!(first_name: "Demo", last_name: "Demo", email: "demo@demo.com", password: "password123")
 user1 = User.create!(first_name: "Derrick", last_name: "Toes", email: "dtoes88@abc.com", password: "password123", brief_bio: "I like to play basketball, but I love to hike.")
@@ -165,3 +167,57 @@ trail9 = Trail.create!(trail_name: "Bearfence Mountain Trail",
                        park_id: park3.id)
 
 trail9.photo.attach(io: File.open('app/assets/images/aws/Shenandoah_Bearfence.jpg'), filename: 'Shenandoah_Bearfence.jpg')
+
+review1 = Review.create!(trail_id: trail1.id,
+                         user_id: user1.id,
+                         rating: 5,
+                         date: "2021-08-01",
+                         body: "THIS IS AN AMAZING HIKE!!! This hike gets harder as you go higher up the trail. Once you reach the top you will have to make a decision on whether or not you will go on to the chains portion. I highly recommend it as it is quite the experience and view.")
+
+review2 = Review.create!(trail_id: trail1.id,
+                         user_id: user2.id,
+                         rating: 5,
+                         date: "2021-09-12",
+                         body: "Usually people tend to overhype a hike but this is a hike that 100% met expectations. I can see why everyone has it on their buket list. I just went last week but I'm already planning my next trip back.")
+
+review3 = Review.create!(trail_id: trail1.id,
+                         user_id: user3.id,
+                         rating: 5,
+                         date: "2022-01-01",
+                         body: "I have a fight coming up in a month and I needed a nice hike to get in some cardio. Angels's Landing was the perfect trail becasue it is both challenging and rewarding. There's nothing like starting the new year with a beautiful hike!")
+
+review4 = Review.create!(trail_id: trail2.id,
+                         user_id: demo.id,
+                         rating: 4,
+                         date: "2021-08-01",
+                         body: "This a great trail but have you met Christian? I heard he's a skilled software engineer who is looking for a job.")
+
+review5 = Review.create!(trail_id: trail3.id,
+                         user_id: user4.id,
+                         rating: 5,
+                         date: "2021-07-22",
+                         body: "Wow! The narrows is everything I hoped it would be and more. It was quite the unqiue experience going on a hike htat has you walking in a river. The water was very refreshing compared to the summer weather but don;t forget to bring drinking water. The river is difficult to hike in and you will be sweating.")
+
+review6 = Review.create!(trail_id: trail3.id,
+                         user_id: user5.id,
+                         rating: 4,
+                         date: "2021-10-20",
+                         body: "This was quite the hike! The scenery was amazing as we were moving through the winding river and tall canyons. We don't have awesome rivers like these back in Scranton.")
+
+review7 = Review.create!(trail_id: trail4.id,
+                         user_id: demo.id,
+                         rating: 5,
+                         date: "2021-05-21",
+                         body: "The hike is a MUST for all who visit Acadia National Park. The views are amazing and you will get to experience a variety of landscapes as you hike along this trail. However, be warned, this is not an easy hike.")
+
+review8 = Review.create!(trail_id: trail4.id,
+                         user_id: user1.id,
+                         rating: 3,
+                         date: "2021-09-05",
+                         body: "I enjoyed this hike and would have given it 5 stars if it wasn't for the bees. There were bees everywhere and no one warned us about this. You would think they would put a warning on a sign or something.")
+
+review9 = Review.create!(trail_id: trail4.id,
+                         user_id: user2.id,
+                         rating: 5,
+                         date: "2022-01-08",
+                         body: ""

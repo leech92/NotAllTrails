@@ -9,6 +9,12 @@ class Review extends React.Component {
     render() {
         const { reviews, user, deleteReview, openModal} = this.props
 
+        const options = {
+            size: 15,
+            isHalf: true,
+            edit: false
+        }
+
         return(
             <div className="trail-reviews">
                 <div className="review-header">
@@ -19,11 +25,15 @@ class Review extends React.Component {
                         <div className="review-top">
                             <img className="review-icon" src={window.icon} />
                             <div className="review-info">
-                                info
+                                <p className="review-name">{`${user.first_name} ${user.last_name}`}</p>
+                                <div className="review-info-bot">
+                                    <Stars options={options} rating={rating}/>
+                                    <p>{review.date}</p>
+                                </div>
                             </div>
                         </div>
                         <div className="review-bottom">
-                            body
+                            <p>{review.body}</p>
                         </div>
                     </div>
                 ))}
