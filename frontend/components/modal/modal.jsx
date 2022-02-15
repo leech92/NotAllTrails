@@ -25,7 +25,7 @@ function Modal({ modal, closeModal}) {
             // component = <CreateReviewContainer />
             break
         case 'updateReview':
-            // component = <UpdateReviewContainer />
+            // component = <UpdateReviewContainer review={modal.review} />
             break
         default:
             return null

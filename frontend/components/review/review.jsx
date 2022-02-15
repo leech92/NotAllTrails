@@ -1,13 +1,24 @@
 import React from "react";
+import { withRouter } from "react-router";
 import Stars from "../shared/stars"
 
 class Review extends React.Component {
     constructor(props) {
         super(props)
+        this.openModal = this.openModal.bind(this)
+    }
+
+    openModal(type) {
+        if (this.props.user) {
+            this.props.openModal(type)
+        }else {
+            debugger
+            this.props.history.push('/login')
+        }
     }
 
     render() {
-        const { reviews, avgRating, user, deleteReview, openModal} = this.props
+        const { reviews, avgRating, user, deleteReview} = this.props
 
         const options = {
             size: 20,
@@ -23,9 +34,7 @@ class Review extends React.Component {
                         <Stars className="review-header-stars" options={options} rating={avgRating}/>
                         <p className="review-header-length">{reviews.length} Reviews</p>
                     </div>
-                    <div>
-                        Write review
-                    </div>
+                    <button className="review-create" onClick={() => this.openModal({type: 'createReview'})}>Write review</button>
                 </div>
                 {reviews.map((review, idx) => (
                     <div key={idx} className="review">
@@ -39,8 +48,16 @@ class Review extends React.Component {
                                 </div>
                             </div>
                         </div>
-                            <p className="review-body">{review.body}</p>
-                            
+                        <p className="review-body">{review.body}</p>
+                        {user.id === review.user_id ? (
+                            <div className="review-buttons">
+                                <p className="review-button" onClick={() => deleteReview(review.id)}>Delete</p>
+                                <p className="review-split">|</p>
+                                <p className="review-button" onClick={() => this.openModal({type: 'updateReview', review: review})}>Edit</p>
+                            </div>
+                        ): 
+                            null
+                        }
                     </div>
                 ))}
             </div>
@@ -48,4 +65,4 @@ class Review extends React.Component {
     }
 }
 
-export default Review
+export default withRouter(Review)
