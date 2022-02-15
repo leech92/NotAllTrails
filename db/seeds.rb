@@ -244,7 +244,7 @@ review13 = Review.create!(trail_id: trail7.id,
                          user_id: user5.id,
                          rating: 5,
                          date: "2021-10-10",
-                         body: "This is an amazing trail but don't make the mistake of underestimatin it. The trail is both long and extremely difficult. At certain points I was on all fours rock scrambling. However, the long hike and the difficultly is worth it becasue the trail is a beautiful beast.")
+                         body: "This is an amazing trail but don't make the mistake of underestimating it. The trail is both long and extremely difficult. At certain points I was on all fours rock scrambling. However, the long hike and the difficultly is worth it becasue the trail is a beautiful beast.")
 
 review14 = Review.create!(trail_id: trail7.id,
                          user_id: user1.id,
