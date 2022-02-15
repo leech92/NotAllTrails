@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
+import CreateReviewContainer from '../review/create_review_container'
+// import UpdateReviewContainer from '../review/edit_review_container'
 
 const mSTP = state => {
     return {
@@ -20,9 +22,9 @@ function Modal({ modal, closeModal}) {
     }
 
     let component
-    switch (modal) {
+    switch (modal.type) {
         case 'createReview':
-            // component = <CreateReviewContainer />
+            component = <CreateReviewContainer />
             break
         case 'updateReview':
             // component = <UpdateReviewContainer review={modal.review} />

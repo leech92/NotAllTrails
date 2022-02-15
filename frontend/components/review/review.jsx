@@ -12,7 +12,6 @@ class Review extends React.Component {
         if (this.props.user) {
             this.props.openModal(type)
         }else {
-            debugger
             this.props.history.push('/login')
         }
     }
@@ -36,7 +35,7 @@ class Review extends React.Component {
                     </div>
                     <button className="review-create" onClick={() => this.openModal({type: 'createReview'})}>Write review</button>
                 </div>
-                {reviews.map((review, idx) => (
+                {reviews.reverse().map((review, idx) => (
                     <div key={idx} className="review">
                         <div className="review-top">
                             <img className="review-icon" src={window.icon} />
