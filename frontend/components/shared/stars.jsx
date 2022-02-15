@@ -14,6 +14,7 @@ class Stars extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.rating !== prevProps.rating) {
             this.setState({rating: this.props.rating})
+            window.location.reload()
         }
     }
 

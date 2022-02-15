@@ -2,6 +2,7 @@ import React from "react";
 import Top from "../shared/top"
 import ParkTrails from "./park_trails"
 import Map from "../map/map";
+import Stars from "../shared/stars";
 
 class Park extends React.Component {
     constructor(props) {
@@ -30,7 +31,22 @@ class Park extends React.Component {
 
         const { park } = this.props
         const trails = park.trails
+        let totalRating = 0
+        let count = 0
+        trails.forEach(trail => {
+            trail.reviews.forEach(review => {
+                totalRating += review.rating
+                count++
+            })    
+        })
+        const avgRating = totalRating / count
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`]
+
+        const options = {
+            size: 20,
+            isHalf: true,
+            edit: false
+        }
 
         return(
             <div className="park">
@@ -45,7 +61,8 @@ class Park extends React.Component {
                 <div className="park-description">
                     <h1 className="park-description-title">Best Trails in {park.park_name}</h1>
                     <div className="park-rating">
-                        Rating Placeholder
+                        <Stars className="park-stars" options={options} rating={avgRating} />
+                        <p className="park-rating-amount">{count} Reviews</p>
                     </div>
                     <p className="park-description-body">{park.description}</p>
                 </div>

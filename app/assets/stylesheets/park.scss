@@ -35,6 +35,15 @@
 
 .park-rating{
     margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.park-rating-amount{
+    padding-top: 3px;
+    margin-left: 5px;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
 }
 
 .park-description-body{
