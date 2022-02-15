@@ -48,7 +48,7 @@ class Review extends React.Component {
                             </div>
                         </div>
                         <p className="review-body">{review.body}</p>
-                        {user.id === review.user_id ? (
+                        {user && user.id === review.user_id ? (
                             <div className="review-buttons">
                                 <p className="review-button" onClick={() => deleteReview(review.id)}>Delete</p>
                                 <p className="review-split">|</p>

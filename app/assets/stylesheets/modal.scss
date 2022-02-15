@@ -1,0 +1,107 @@
+.modal-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 20;
+}
+  
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.review-form-outer{
+    height: 580px;
+    width: 560px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0px 0px 40px 5px rgb(92, 91, 91);
+}
+
+.review-form{
+    height: 520px;
+    width: 500px;
+    padding: 30px;
+}
+
+.review-form-exit{
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(124, 124, 124);
+    cursor: pointer;
+}
+
+.review-form-trail{
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(71, 71, 71);
+}
+
+.review-form-body{
+    width: 465px;
+    height: 150px;
+    padding: 15px;
+    margin-top: 30px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-weight: 100;
+    resize: none;
+}
+
+.review-form-body:focus{
+    outline: none;
+}
+
+.review-form-no-submit{
+    margin-top: 100px;
+    margin-left: 330px;
+    height: 40px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgb(152, 201, 152);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.review-form-no-submit:hover{
+    cursor: pointer;
+    background-color: rgb(186, 224, 186);
+}
+
+.review-form-submit{
+    margin-top: 100px;
+    margin-left: 330px;
+    height: 40px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgb(39, 124, 39);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.review-form-submit:hover{
+    cursor: pointer;
+    background-color: rgb(82, 143, 70);
+}

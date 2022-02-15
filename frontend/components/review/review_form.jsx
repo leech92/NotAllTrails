@@ -18,14 +18,13 @@ class ReviewForm extends React.Component {
         this.setState(nextState)
     }
 
-    setBody(body) {
+    setBody(e) {
         let nextState = this.state
-        nextState.review.body = body
+        nextState.review.body = e.target.value
         this.setState(nextState)
     }
 
     doAction() {
-        debugger
         this.props.action(this.state.review)
         this.props.closeModal()
     }
@@ -42,16 +41,17 @@ class ReviewForm extends React.Component {
         return(
             <div className="review-form-outer">
                 <div className="review-form">
-                    <div className="review-form-exit" onClick={this.props.closeModal}>x</div>
+                    <div className="review-form-exit" onClick={this.props.closeModal}>&#10006;</div>
                     <p className="review-form-trail">{this.props.trail}</p>
                     <Stars className="review-form-rating" options={options} onChange={this.setRating} value={rating} />
-                    <input
+                    <textarea
                         className="review-form-body"
-                        type="text"
                         onChange={this.setBody}
                         value={body}
                         placeholder="Give back to the community. Share your thoughts about the trail so others know what to expect."
-                    />
+                        cols="50"
+                        rows="8" >
+                    </textarea>
                     {rating ? (
                         <div className="review-form-submit" onClick={this.doAction}>Post</div>
                     ) : (
