@@ -4,7 +4,7 @@ import { createReview } from "../../actions/trail_actions";
 import { closeModal } from "../../actions/modal_actions";
 import ReviewForm from "./review_form"
 
-const mSTP = (state, ownProps) => {
+const mSTP = state => {
     return {
         review: {
             trail_id: state.entities.trails.id,
