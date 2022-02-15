@@ -8,7 +8,7 @@ class Review extends React.Component {
 
     render() {
         const { reviews, user, deleteReview, openModal} = this.props
-        debugger
+
         const options = {
             size: 15,
             isHalf: true,
@@ -27,13 +27,13 @@ class Review extends React.Component {
                             <div className="review-info">
                                 <p className="review-name">{`${user.first_name} ${user.last_name}`}</p>
                                 <div className="review-info-bot">
-                                    <Stars options={options} rating={rating}/>
-                                    <p>{review.date}</p>
+                                    <Stars className="review-stars" options={options} rating={review.rating}/>
+                                    <p className="review-date">{new Date(review.date + " 00:00").toString().slice(4, 15)}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="review-bottom">
-                            <p>{review.body}</p>
+                            <p className="review-body">{review.body}</p>
                         </div>
                     </div>
                 ))}

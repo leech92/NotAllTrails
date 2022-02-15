@@ -1,4 +1,5 @@
 import React from "react";
+import Stars from "../shared/stars";
 import Top from "../shared/top";
 import RelatedTrails from "./related_trails"
 import Map from "../map/map";
@@ -34,9 +35,19 @@ class Trail extends React.Component {
         if (Object.keys(this.props.parks).length !== 3) return null
 
         const { trail, parks, user } = this.props
+        const reviews = trail.reviews
+        let rating = 0
+        reviews.forEach(review => rating += review.rating)
+        const avgRating = rating / (reviews.length * (1.0))
         const park = parks[trail.park_id]
         const filteredTrails = park.trails.filter(filteredTrail => filteredTrail.id !== trail.id)
         const location = [`${park.country}`, `${park.state}`, `${park.park_name}`, `${trail.trail_name}`]
+
+        const options = {
+            size: 20,
+            isHalf: true,
+            edit: false
+        }
 
         return(
             <div className="trail">
@@ -49,7 +60,8 @@ class Trail extends React.Component {
                             <span className={`trail-header-${trail.difficulty}`}>
                                 {trail.difficulty}
                             </span>
-                            Rating Placeholder
+                            <Stars className="trail-stars" options={options} rating={avgRating} />
+                            <p className="trail-length">({reviews.length})</p>
                         </div>
                         <p className="trail-header-park">{park.park_name}</p>
                     </div>
@@ -87,7 +99,7 @@ class Trail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <Review reviews={trail.reviews} user={user} deleteReview={this.props.deleteReview} openModal={this.props.openModal} />
+                        <Review reviews={reviews} user={user} deleteReview={this.props.deleteReview} openModal={this.props.openModal} />
                     </div>
                     <div className="trail-right">
                         <div className="trail-map">
