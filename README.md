@@ -14,12 +14,12 @@ NotAllTrails is built with a backend that uses Ruby on Rails and a frontend that
 ## Reviews CRUD
 Signed in users will have the ability to create reviews, update their reviews, and delete their reviews on the trail pages. When not signed in, only the ability to read reviews will be available. The create and edit functionality is done through the use of a modal that allows for a more fluid user experience.
 
-<img src="app/assets/images/readme/modal.png" width="600" height="300">
+<img src="app/assets/images/readme/modal.png" width="400" height="400">
 
 ## Google Maps API
 The Google Maps API was used to generate a map that shows the park and nearby trails. The map allos users to see and easily access information from nearby parks and trails by clicking on the markers.
 
-<img src="app/assets/images/readme/gmap.png" width="400" height="400">
+<img src="app/assets/images/readme/gmap.png" width="600" height="300">
 
 ## Search Bar
 A search bar is available on every page to allow users to easily naviagte from one page to another. The search bar uses a helper function and a filter to manipulate the className to display a dropdown that the user wants to see.
