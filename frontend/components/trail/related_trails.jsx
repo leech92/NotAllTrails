@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Stars from "../shared/stars";
 
 class RelatedTrails extends React.Component {
     constructor(props) {
@@ -8,6 +9,19 @@ class RelatedTrails extends React.Component {
 
     render() {
         const { park, filteredTrails } = this.props
+
+        let avgRatings = []
+        filteredTrails.forEach(trail => {
+            let rating = 0
+            trail.reviews.forEach(review => rating += review.rating)
+            avgRatings.push(rating / trail.reviews.length)
+        })
+
+        const options = {
+            size: 20,
+            isHalf: true,
+            edit: false
+        }
 
         return(
             <div className="trail-relateds">
@@ -22,7 +36,8 @@ class RelatedTrails extends React.Component {
                             <span className={`trail-related-${relatedTrail.difficulty}`}>
                                 {relatedTrail.difficulty}
                             </span>
-                            Rating Placeholder
+                            <Stars className="trail-related-stars" options={options} rating={avgRatings[idx]} />
+                            <p className="trail-related-amount">({relatedTrail.reviews.length})</p>
                         </div>
                         <div className="trail-related-length">
                             <p>Length: {relatedTrail.length} </p>
