@@ -37,8 +37,9 @@
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    width: 220px;
+    width: 200px;
     color: white;
 }
 
@@ -73,6 +74,10 @@
     background-color: rgb(90, 90, 90);
     width: 70px;
     border-radius: 5px;
+}
+
+.trail-length{
+    font-size: 14px;
 }
 
 .trail-header-park{
@@ -142,6 +147,7 @@
 
 .trail-information{
     width: 94%;
+    border-bottom: 1px solid rgb(231, 231, 231);
 }
 
 .trail-description{

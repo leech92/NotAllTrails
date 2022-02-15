@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Stars from "../shared/stars";
 
 class ParkTrails extends React.Component {
     constructor(props) {
@@ -8,6 +9,18 @@ class ParkTrails extends React.Component {
 
     render() {
         const { trails, park } = this.props
+        let avgRatings = []
+        trails.forEach(trail => {
+            let rating = 0
+            trail.reviews.forEach(review => rating += review.rating)
+            avgRatings.push(rating / trail.reviews.length)
+        })
+
+        const options = {
+            size: 20,
+            isHalf: true,
+            edit: false
+        }
         
         return(
             <div className="park-trails">
@@ -23,7 +36,8 @@ class ParkTrails extends React.Component {
                                 <span className={`park-trail-${trail.difficulty}`}>
                                     {trail.difficulty}
                                 </span>
-                                Rating Placeholder
+                                <Stars className="park-trail-stars" options={options} rating={avgRatings[idx]} />
+                                <p className="park-trail-amount">({trail.reviews.length})</p>
                             </div>
                             <div className="park-trail-length">
                                 <p>Length: {trail.length} </p>

@@ -1,0 +1,75 @@
+.trail-reviews{
+    width: 94%;
+}
+
+.review-header{
+    margin-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.review-header-rating{
+    font-size: 52px;
+    margin-bottom: 5px;
+    color: rgb(70, 70, 70);
+}
+
+.review-header-length{
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+}
+
+.review{
+    margin-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.review-top{
+    display: flex;
+    flex-direction: row;
+}
+
+.review-icon{
+    height: 60px;
+    width: 60px;
+}
+
+.review-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+.review-name{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(56, 55, 55);
+}
+
+.review-info-bot{
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.review-date{
+    margin-left: 10px;
+    font-size: 14px;
+    color: rgb(117, 117, 117);
+}
+
+.review-body{
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-weight: 100;
+}

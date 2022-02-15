@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 300px;
+    width: 200px;
 }
 
 .park-trail-easy{
@@ -88,6 +88,12 @@
     background-color: rgb(90, 90, 90);
     width: 70px;
     border-radius: 5px;
+}
+
+.park-trail-amount{
+    padding-top: 5px;
+    font-size: 12px;
+    color: rgb(126, 121, 121);
 }
 
 .park-trail-length{

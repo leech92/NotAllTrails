@@ -99,7 +99,7 @@ class Trail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <Review reviews={reviews} user={user} deleteReview={this.props.deleteReview} openModal={this.props.openModal} />
+                        <Review reviews={reviews} avgRating={avgRating} user={user} deleteReview={this.props.deleteReview} openModal={this.props.openModal} />
                     </div>
                     <div className="trail-right">
                         <div className="trail-map">
