@@ -5,10 +5,10 @@
 <img src="app/assets/images/readme/splash.png" width="800" height="400">
 
 # Overview
-NotAllTrails is a clone of AllTrails where people can use a search an links to find parks and trails. Each park and trail page will have information on the park or hike along with links to the related trails or nearby trails. Both pages will also have a map with markers that show nearby parks and trails. The trail pages will also have reviews that signed in users can create, update, and delete.
+NotAllTrails is a clone of AllTrails where people can use a search bar and links to find parks and trails. Each park and trail page will have information on the park or hike along with links to the related trails or nearby trails. Both pages will also have a map with markers that show nearby parks and trails. The trail pages will also have reviews that signed in users can create, update, and delete.
 
 # Technologies
-NotAllTrails is built with a backend that uses Ruby on Rails and a frontend that uses React and Redux. The database was built using PostgesSql and the trail images were uploaded using AWS S3 storage. Styling was done using SCSS. The maps and markers were generated using the Google Maps API.
+NotAllTrails is built with a backend that uses Ruby on Rails and a frontend that uses React and Redux. The database was built using PostgreSql and the trail images were uploaded using AWS S3 storage. Styling was done using SCSS. The maps and markers were generated using the Google Maps API.
 
 # Features
 ## Reviews CRUD
@@ -17,12 +17,12 @@ Signed in users will have the ability to create reviews, update their reviews, a
 <img src="app/assets/images/readme/modal.png" width="400" height="400">
 
 ## Google Maps API
-The Google Maps API was used to generate a map that shows the park and nearby trails. The map allos users to see and easily access information from nearby parks and trails by clicking on the markers.
+The Google Maps API was used to generate a map that shows the park and nearby trails. The map allows users to see and easily access information from nearby parks and trails by clicking on the markers.
 
 <img src="app/assets/images/readme/gmap.png" width="600" height="300">
 
 ## Search Bar
-A search bar is available on every page to allow users to easily naviagte from one page to another. The search bar uses a helper function and a filter to manipulate the className to display a dropdown that the user wants to see.
+A search bar is available on every page to allow users to easily navigate from one page to another. The search bar uses a helper function and a filter to manipulate the className to display a dropdown that the user wants to see.
 
 ```js
 setActive() {

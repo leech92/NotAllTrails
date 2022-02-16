@@ -172,13 +172,13 @@ review1 = Review.create!(trail_id: trail1.id,
                          user_id: user1.id,
                          rating: 5,
                          date: "2021-08-01",
-                         body: "THIS IS AN AMAZING HIKE!!! This hike gets harder as you go higher up the trail. Once you reach the top you will have to make a decision on whether or not you will go on to the chains portion. I highly recommend it as it is quite the experience and view.")
+                         body: "THIS IS AN AMAZING HIKE!!! This hike gets harder as you go higher up the trail. Once you reach the top you will have to make a decision on whether or not you will go on to the chains portion. I highly recommend it as it is quite the experience and has a breathtaking view.")
 
 review2 = Review.create!(trail_id: trail1.id,
                          user_id: user2.id,
                          rating: 5,
                          date: "2021-09-12",
-                         body: "Usually people tend to overhype a hike but this is a hike that 100% met expectations. I can see why everyone has it on their buket list. I just went last week but I'm already planning my next trip back.")
+                         body: "Usually people tend to overhype a hike but this is a hike that 100% met expectations. I can see why everyone has it on their bucket list. I just went last week but I'm already planning my next trip back.")
 
 review3 = Review.create!(trail_id: trail1.id,
                          user_id: user3.id,
@@ -196,7 +196,7 @@ review5 = Review.create!(trail_id: trail3.id,
                          user_id: user4.id,
                          rating: 5,
                          date: "2021-07-22",
-                         body: "Wow! The narrows is everything I hoped it would be and more. It was quite the unqiue experience going on a hike htat has you walking in a river. The water was very refreshing compared to the summer weather but don;t forget to bring drinking water. The river is difficult to hike in and you will be sweating.")
+                         body: "Wow! The narrows is everything I hoped it would be and more. It was quite the unqiue experience going on a hike that has you walking in a river. The water was very refreshing compared to the summer weather but don't forget to bring drinking water. The river is difficult to hike in and you will be sweating.")
 
 review6 = Review.create!(trail_id: trail3.id,
                          user_id: user5.id,
@@ -214,7 +214,7 @@ review8 = Review.create!(trail_id: trail4.id,
                          user_id: user1.id,
                          rating: 3,
                          date: "2021-09-05",
-                         body: "I enjoyed this hike and would have given it 5 stars if it wasn't for the bees. There were bees everywhere and no one warned us about this. You would think they would put a warning on a sign or something.")
+                         body: "I enjoyed this hike and would have given it 5 stars if it wasn't for the bees. There were bees everywhere and no one warned us about this. You would think they would put up a warning sign or something.")
 
 review9 = Review.create!(trail_id: trail4.id,
                          user_id: user2.id,
@@ -244,7 +244,7 @@ review13 = Review.create!(trail_id: trail7.id,
                          user_id: user5.id,
                          rating: 5,
                          date: "2021-10-10",
-                         body: "This is an amazing trail but don't make the mistake of underestimating it. The trail is both long and extremely difficult. At certain points I was on all fours rock scrambling. However, the long hike and the difficultly is worth it becasue the trail is a beautiful beast.")
+                         body: "This is an amazing trail but don't make the mistake of underestimating it. The trail is both long and extremely difficult. At certain points I was rock scrambling on all fours. However, the long hike and the difficultly is worth it becasue the trail is a beautiful beast.")
 
 review14 = Review.create!(trail_id: trail7.id,
                          user_id: user1.id,
@@ -268,7 +268,7 @@ review17 = Review.create!(trail_id: trail9.id,
                          user_id: user3.id,
                          rating: 4,
                          date: "2021-08-06",
-                         body: "This hike is a short and simple hike that I enjoy doing every weekend. If you're looking for a hike that is mildly challenging but won;t take up a huge chunk of your day, look no further.")
+                         body: "This hike is a short and simple hike that I enjoy doing every weekend. If you're looking for a hike that is mildly challenging but won't take up a huge chunk of your day, look no further.")
 
 review18 = Review.create!(trail_id: trail9.id,
                          user_id: user4.id,
